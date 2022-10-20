@@ -1,0 +1,140 @@
+@import url("https://fonts.google.com/specimen/Overpass");
+
+:root {
+  --orange: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --medium-grey: hsl(216, 12%, 54%);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 15px;
+  font-family: "Overpass", sans-serif;
+  background-color: hsl(228, 11%, 9%);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Main */
+
+main {
+  background-color: hsl(215, 22%, 15%);
+  max-width: 400px;
+  padding: 2rem;
+  border-radius: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0 1rem;
+}
+
+main .img-wrapper {
+  background-color: hsl(210, 21%, 18%);
+  border-radius: 50%;
+  display: inline-block;
+  max-width: 50px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main h1,
+aside h1 {
+  font-size: 1.75rem;
+  margin-top: 1rem;
+}
+main p,
+aside p {
+  color: var(--light-grey);
+  line-height: 1.7;
+}
+main ul {
+  padding: unset;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5rem 0 1rem;
+}
+main ul li {
+  list-style-type: none;
+  color: var(--medium-grey);
+  background-color: hsl(210, 21%, 18%);
+  width: 50px;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 50%;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+main button {
+  width: 100%;
+  background-color: var(--orange);
+  border: none;
+  outline: none;
+  color: var(--white);
+  padding: 1rem;
+  border-radius: 25px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+main button:hover {
+  background-color: var(--white);
+  color: var(--orange);
+}
+
+main ul li:hover {
+  background-color: var(--orange);
+  color: var(--white);
+}
+main ul li.clicked {
+  color: var(--white);
+  background-color: var(--light-grey);
+}
+
+/* Aside */
+
+aside {
+  max-width: 400px;
+  position: absolute;
+  background-color: hsl(215, 22%, 15%);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 30px;
+  gap: 2rem;
+  text-align: center;
+  display: none;
+  margin: 0 1rem;
+}
+
+aside .spans {
+  background-color: hsl(210, 21%, 18%);
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  color: var(--orange);
+}
+
+aside.show {
+  display: flex;
+}
+
+main.hide {
+  display: none;
+}
